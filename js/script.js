@@ -8,6 +8,31 @@ window.onscroll = function() {
     }
 };
 
+// Repliega el menú cuando se hace clic en un elemento del menú o cuando el mouse sale del nav
+document.addEventListener('DOMContentLoaded', function () {
+    // Selecciona el botón del menú y el contenedor del menú
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Cuando el mouse sale del área del menú, se repliega el menú
+    navbarCollapse.addEventListener('mouseleave', function () {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    });
+
+    // Cuando se hace clic en un ítem del menú, se repliega el menú
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    });
+});
+
+
 // Handle Active Class on Click
 let navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
