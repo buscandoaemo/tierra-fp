@@ -27,7 +27,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
         <div class="container">
@@ -38,7 +38,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav mt-4 pt-2">
+                <ul class="navbar-nav mt-lg-4 mt-md-0 mt-sm-0 pt-2">
                     <li class="nav-item">
                         <a class="nav-link" href="#value-proposition">Value Proposition</a>
                     </li>
@@ -57,7 +57,7 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="bg-white text-center py-4">
+    <header class="bg-white text-center py-4 d-none d-md-block">
         <h1 class="m-0">Your Global Partners in Sustainability Transition</h1>
     </header>
 
@@ -73,17 +73,17 @@
 		<!-- Slides -->
 		<div class="carousel-inner">
 			<div class="carousel-item active" style="background-image: url('images/slide-1.jpg');">
-				<div class="carousel-caption d-none d-md-block">
-					<h2 class="text-light">Agriculture, agrifood<br> and sustainability</h2>
+				<div class="carousel-caption d-block">
+					<h2 class="text-light">Agriculture, agrifood and sustainability</h2>
 				</div>
 			</div>
-			<div class="carousel-item" style="background-image: url('images/slide-2.jpg');">
-				<div class="carousel-caption d-none d-md-block">
+			<div class="carousel-item" style="background-image: url('images/slide-2.jpg'); background-position: center right">
+				<div class="carousel-caption d-block">
 					<h2 class="text-light">Mining</h2>
 				</div>
 			</div>
 			<div class="carousel-item" style="background-image: url('images/slide-3.jpg');">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-block">
 					<h2 class="text-light">Manufacturing<br> and Utilities</h2>
 				</div>
 			</div>
@@ -103,7 +103,7 @@
 
 
     <!-- Value Proposition Section -->
-    <section id="value-proposition" class="bg-green py-5 plus">
+    <section id="value-proposition" class="bg-green py-5 plus px-3 ">
         <div class="container">
             <h2 class="text-center pb-2">Value <span>Proposition</span></h2>
             <p class="text-center">At <strong>TierraFP</strong>, we work with dynamic and innovative companies worldwide, helping them to transition and scale within the new sustainable global economy. Our network of supply chain specialists will assess, track and report on your company’s progress as you navigate the evolving regulatory and disclosure landscape.</p>
@@ -112,7 +112,7 @@
     </section>
 
     <!-- Specialists Section -->
-    <section id="specialists" class="container py-5 plus">
+    <section id="specialists" class="container py-5 plus px-3 ">
         <h2 class="text-center pb-1">Specialists</h2>
         <div class="d-flex justify-content-center my-3 pb-3">
             <img src="images/icn-1.png" alt="Icon 1" width="50" height="50" class="mx-2 icon-img">
@@ -128,7 +128,7 @@
     <section id="services" class="bg-brown-light">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 m-0 p-0" style="background-image:url('images/field.jpg'); background-size: cover; background-position: center center; position: relative">
+                <div id="photofield" class="col-md-6 m-0 p-0" style="background-image:url('images/field.jpg'); background-size: cover; background-position: center center; position: relative">
 					<div class="decoration-foto"></div>
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center p-5 py-5 plus">
@@ -150,18 +150,18 @@
     </section>
 
     <!-- Additional Section -->
-    <section class="py-5 text-center" style="background-color: #E6F4E6;">
+    <section class="py-5 px-3 text-center" style="background-color: #E6F4E6;">
         <div class="container">
             <h3 class="p-0 m-0">Count on <span>TierraFP</span> for support and guidance at any point along your pathway towards a sustainable future.</h3>
         </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact-us" class="py-5 plus text-white bg-brown">
+    <section id="contact-us" class="py-5 px-3 plus text-white bg-brown">
 		<div class="container">
         <h2 class="text-left text-white pb-2">Contact us</h2>
         <form action="php/process_form.php" method="post">
-            <div class="row mb-2">
+            <div id="form-container" class="row mb-2">
                 <div class="col">
                     <input type="text" class="form-control mb-3" placeholder="Name" required>
 					<input type="email" class="form-control mb-3" placeholder="E-mail" required>
@@ -183,7 +183,7 @@
         <div class="container">
             <a class="navbar-brand" href="#top">
                 <img src="images/ISO-contacto.png" class="mr-2" alt="TierraFP Iso" height="62">
-            </a> <small><strong>TierraFP</strong> © 2024. Website by <strong>2MUCH</strong> | Privacy Policy</small>
+            </a> <small><strong>TierraFP</strong> © 2024. Website by <strong>2MUCH</strong></small>
         </div>
     </footer>
 

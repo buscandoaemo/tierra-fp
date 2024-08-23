@@ -14,7 +14,7 @@ div.bg-next{background-color: rgba(255, 255, 255, 0.5);border-radius: 50%;paddin
 .decoration-slider{width:100%;height:16px;position:absolute;background-color:rgba(255,255,255,0.3);z-index:2;bottom:0}
 .decoration-foto{width:16px;height:100%;position:absolute;background-color:rgba(255,255,255,0.3);z-index:2;right:0}
 .carousel-indicators {margin-bottom:2rem}
-section{scroll-margin-top:40px}
+section{scroll-margin-top: 70px;}
 section h2{color:#5A4840;margin-bottom:1.2rem;font-weight:600}
 section h2 span{color:#5A9454}
 section h3{color:#5A4840;font-weight:400}
@@ -48,10 +48,22 @@ h3{font-size:1.3rem}
 }
 @media (max-width:991px) {
 #navbar .container{display:flex;flex-direction:row-reverse;align-items:flex-end;justify-content:flex-end}
+.navbar-toggler{border: none; margin-right: 0.5rem}
+.navbar-toggler:focus{box-shadow: none!important}
 h1{font-size:1.8rem}
 #hero-slider .carousel-caption h2{font-size:2.8rem}
 }
 @media (max-width:767px) {
+#photofield{height: 350px}
+.decoration-foto {width:100%;height:16px;bottom:0}
+#hero-slider .carousel-item {height: 400px}
+#hero-slider .carousel-caption h2{font-size:2.5rem}
+#hero-slider .carousel-caption{top:40%;left:50%;width:70%}
+div.bg-prev{margin-right:0;}
+div.bg-next{margin-left:0;}
+#form-container{display: flex;flex-direction: column}
 }
 @media (max-width:479px) {
+#hero-slider .carousel-caption h2{font-size:2.3rem}
+#hero-slider .carousel-caption{top:35%;left:50%;width:85%}
 }
