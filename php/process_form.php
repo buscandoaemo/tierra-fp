@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Configure the email
-    $to = 'info@tierra-fp.com'; // Replace with your email address
+    $to = 'buscandoaemo@gmail.com'; // Replace with your email address info@tierra-fp.com
     $subject = 'New contact message: ' . $subject;
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
