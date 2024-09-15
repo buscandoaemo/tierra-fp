@@ -6,51 +6,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Configure the email
-    $to = 'buscandoaemo@gmail.com'; // Replace with your email address info@tierra-fp.com
+    // Email configuration
+    $to = 'your-email@example.com'; // Replace with your email address
     $subject = 'New contact message: ' . $subject;
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n"; // Allows HTML format in the email
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n"; // To use HTML in the email
 
-    // Create the email body in HTML format
+    // Email body in HTML format
     $mailBody = "
     <html>
     <head>
         <title>New contact message</title>
-        <style>
-            body { font-family: Arial, sans-serif; }
-            .container { width: 80%; margin: auto; }
-            .header { background: #f2f2f2; padding: 10px; border-bottom: 2px solid #ddd; }
-            .content { padding: 20px; }
-            .footer { background: #f2f2f2; padding: 10px; border-top: 2px solid #ddd; }
-        </style>
     </head>
     <body>
-        <div class='container'>
-            <div class='header'>
-                <h2>New contact message:</h2>
-            </div>
-            <div class='content'>
-                <p><strong>Name:</strong> $name</p>
-                <p><strong>Email:</strong> $email</p>
-                <p><strong>Subject:</strong> $subject</p>
-                <p><strong>Message:</strong></p>
-                <p>$message</p>
-            </div>
-            <div class='footer'>
-                <p>This message was sent from the contact form on your website.</p>
-            </div>
-        </div>
+        <h2>New contact message:</h2>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Subject:</strong> $subject</p>
+        <p><strong>Message:</strong></p>
+        <p>$message</p>
     </body>
     </html>
     ";
 
-    // Send the email
+    // Send email
     if (mail($to, $subject, $mailBody, $headers)) {
-        echo "The message has been sent successfully.";
+        // Display success message
+        echo '<div id="form-container" class="row mb-2">
+                <div class="col">
+                    <p class="alert alert-success">The message has been sent successfully. Thank you for contacting us!</p>
+                </div>
+              </div>';
     } else {
-        echo "There was an error sending the message.";
+        // Display error message
+        echo '<div id="form-container" class="row mb-2">
+                <div class="col">
+                    <p class="alert alert-danger">There was an error sending your message. Please try again later.</p>
+                </div>
+              </div>';
     }
+} else {
+    echo '<div class="alert alert-danger">Unauthorized access</div>';
 }
 ?>
